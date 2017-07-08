@@ -1,8 +1,9 @@
-package blog.dao;
+package pet.dao;
 
 import java.util.List;
 
-import blog.pojo.Student;
+import pet.model.Student;
+
 
 public interface IStudentDao {
     public List<Student> findStudenInfo();

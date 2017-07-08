@@ -1,6 +1,6 @@
-package blog.service;
+package pet.service;
 
-import blog.pojo.Student;
+import pet.model.Student;
 
 public interface IStudentService {
 

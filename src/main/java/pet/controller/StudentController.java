@@ -1,4 +1,4 @@
-package blog.controller;
+package pet.controller;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import blog.dao.IStudentDao;
-import blog.pojo.Student;
-import blog.service.IStudentService;
+import pet.dao.IStudentDao;
+import pet.model.Student;
+
 
 /**
  * 

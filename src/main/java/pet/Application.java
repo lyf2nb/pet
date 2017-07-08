@@ -1,4 +1,4 @@
-package blog;
+package pet;
 
 import javax.sql.DataSource;
 

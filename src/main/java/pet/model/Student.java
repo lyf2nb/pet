@@ -1,4 +1,4 @@
-package blog.pojo;
+package pet.model;
 
 public class Student {
 

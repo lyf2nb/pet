@@ -1,4 +1,4 @@
-package blog.controller;
+package pet.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wordnik.swagger.annotations.ApiOperation;
 
-import blog.pojo.Student;
+import pet.model.Student;
+
 
 /**
  * 这个是restful接口的一个东西,先放着吧
