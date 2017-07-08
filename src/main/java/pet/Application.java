@@ -28,7 +28,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @EnableAutoConfiguration
 @SpringBootApplication
 @ComponentScan
-@MapperScan("blog.dao")
+@MapperScan("pet.dao")
 // 该 @SpringBootApplication
 // 注解等价于以默认属性使用 @Configuration, @EnableAutoConfiguration和 @ComponentScan
 public class Application {
