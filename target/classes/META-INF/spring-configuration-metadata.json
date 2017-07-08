@@ -2,7 +2,7 @@
   "groups": [{
     "name": "c3p0",
     "type": "javax.sql.DataSource",
-    "sourceType": "blog.Application",
+    "sourceType": "pet.Application",
     "sourceMethod": "public javax.sql.DataSource dataSource() "
   }],
   "properties": []
