@@ -1,5 +1,5 @@
 # **一**
-本项目采用 SpringBoot + ssm + MySql(连接池采用C3P0),暂时的框架只有这些,因为对Springboot不太了解,目录结构先这样写,有谁明白可以改一下
+本项目采用 SpringBoot + ssm + MySql(连接池采用C3P0),暂时的框架只有这些,因为对Springboot不太了解,目录结构先这样写,有谁明白可以改一下 
 
 
 # **二**
