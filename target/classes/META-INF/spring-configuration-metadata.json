@@ -1,0 +1,9 @@
+{
+  "groups": [{
+    "name": "c3p0",
+    "type": "javax.sql.DataSource",
+    "sourceType": "blog.Application",
+    "sourceMethod": "public javax.sql.DataSource dataSource() "
+  }],
+  "properties": []
+}
