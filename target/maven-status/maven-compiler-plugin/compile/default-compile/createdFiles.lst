@@ -1,6 +1,0 @@
-pet\service\IStudentService.class
-pet\controller\SwaggerController.class
-pet\model\Student.class
-pet\dao\IStudentDao.class
-pet\controller\IndexController.class
-pet\controller\StudentController.class
