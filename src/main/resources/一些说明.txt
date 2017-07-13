@@ -1,0 +1,11 @@
+首先:
+项目启动可到Application.java中直接main方法运行改类.
+也可以使用maven,如果使用maven启动请使用spring-boot:run 运行项目.
+
+
+一 : 
+springloaded-1.2.5.RELEASE.jar这个jar包适用于eclipse的热启动的
+具体配置参考http://blog.csdn.net/u014695188/article/details/52262146
+该网页的最后一条
+
+二:如果使用maven热启动请使用spring-boot:run 运行项目

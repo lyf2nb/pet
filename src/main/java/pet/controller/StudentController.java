@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import pet.dao.IStudentDao;
 import pet.model.Student;
+import pet.model.StudentExample;
+import pet.model.StudentExample.Criteria;
 
 
 /**
@@ -23,7 +25,7 @@ public class StudentController {
     private Logger logger = Logger.getLogger(StudentController.class);
     
     @Resource
-    private IStudentDao studentService;
+    private IStudentDao studentDao;
  
     /*
      *  http://localhost:8080/getUserInfo
@@ -32,11 +34,19 @@ public class StudentController {
     @RequestMapping("/getStudentInfo")
     @ResponseBody
     public Student getUserInfo() {
-        List<Student> findStudenInfo = studentService.findStudenInfo();
+       /* List<Student> findStudenInfo = studentService.findStudenInfo();
         if(findStudenInfo!= null){
             System.out.println(findStudenInfo);
             logger.info("user.getAge():"+findStudenInfo);
         }
-        return findStudenInfo.get(0);
+        return findStudenInfo.get(0);*/
+        
+        StudentExample exa = new StudentExample();
+        Criteria criteria = exa.createCriteria();
+        criteria.andNameEqualTo("Megan");
+        List<Student> list = studentDao.selectByExample(exa);
+        System.out.println(list);
+        System.out.println(list);
+        return list.get(0);
     }
 }
