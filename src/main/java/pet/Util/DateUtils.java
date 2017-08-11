@@ -38,9 +38,7 @@ public class DateUtils {
     public static void main(String [] args) throws ParseException {
         String target = "2017-08-11 12:00:00";
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-
         System.out.println(sameDay(sdf.parse(target),new Date()));
-
     }
 
 }
