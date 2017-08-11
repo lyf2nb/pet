@@ -82,12 +82,12 @@
 		</dependency>
 
 		<!-- 热启动： 每自修改后， 程序自动启动spring Application上下文。 -->
-		<dependency>
+<!--		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<version>1.5.4.RELEASE</version>
 			<optional>true</optional>
-		</dependency>
+		</dependency>-->
 		
 	</dependencies>
 	<build>
