@@ -21,12 +21,14 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 @EnableAutoConfiguration
 @SpringBootApplication
+@EnableScheduling // 允许支持schedule
 @ComponentScan
 @MapperScan("pet.dao")
 // 该 @SpringBootApplication
