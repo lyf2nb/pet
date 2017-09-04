@@ -8,10 +8,10 @@ import org.mybatis.generator.maven.MyBatisGeneratorMojo;
  */
 public class Test {
 
-    public static void main(String[] args ) throws MojoExecutionException {
+/*    public static void main(String[] args ) throws MojoExecutionException {
         MyBatisGeneratorMojo mm = new MyBatisGeneratorMojo();
         mm.execute();
 
-    }
+    }*/
 
 }
