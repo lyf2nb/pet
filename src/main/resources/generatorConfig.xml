@@ -44,7 +44,7 @@
         </javaClientGenerator>
 
 
-        <table schema="pet" tableName="tb_user" domainObjectName="User">
+        <table schema="${schema}" tableName="${tableName}" domainObjectName="${domainObjectName}">
             <property name="constructorBased" value="true" />
             <property name="useActualColumnNames" value="false" />
             <property name="ignoreQualifiersAtRuntime" value="true" />
