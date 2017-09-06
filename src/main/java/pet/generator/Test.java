@@ -14,4 +14,10 @@ public class Test {
 
     }*/
 
+
+    public void getMojo(){
+
+
+    }
+
 }
