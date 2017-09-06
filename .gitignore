@@ -23,5 +23,5 @@ dist/
 nbdist/
 .nb-gradle/
 
-
-generator.properties
+.gitignore.bak
+src/main/resources/generator.properties
