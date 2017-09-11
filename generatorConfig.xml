@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <properties resource="generator.properties"/>
+    <!--<properties resource="generator.properties"/>-->
 
-    <context id="ssm" targetRuntime="MyBatis3">
+    <context id="pet" targetRuntime="pet.generator.TkMyBatis3Impl">
         <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
         <plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
@@ -20,8 +20,9 @@
           userId="rams_test" password="bangsun">
         </jdbcConnection>
         -->
-        <jdbcConnection driverClass="${driver}"
-                        connectionURL="${url}" userId="${username}" password="${password}">
+        <!-- 已通过java代码抽取出-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://101.200.53.20:3306/pet" userId="xiaogouzi" password="xiaogouzi">
         </jdbcConnection>
 
         <javaTypeResolver>
@@ -43,8 +44,12 @@
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
-
-        <table schema="${schema}" tableName="${tableName}" domainObjectName="${domainObjectName}">
+        <!-- 已通过java代码抽取出-->
+        <table schema="pet" tableName="student" domainObjectName="Student"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"
+            >
             <property name="constructorBased" value="true" />
             <property name="useActualColumnNames" value="false" />
             <property name="ignoreQualifiersAtRuntime" value="true" />

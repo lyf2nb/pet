@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pet.dao.employee.IEmployeeDao">
+  <resultMap id="BaseResultMap" type="pet.model.employee.Employee">
+    <constructor>
+      <idArg column="id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="login_name" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="need_change_password" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="last_login_date" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="register_date" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="password" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="id_number" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="enabled" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="mobile" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, login_name, need_change_password, last_login_date, register_date, password, id_number, 
+    enabled, mobile, name
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_employee
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from tb_employee
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="pet.model.employee.Employee">
+    insert into tb_employee (id, login_name, need_change_password, 
+      last_login_date, register_date, password, 
+      id_number, enabled, mobile, 
+      name)
+    values (#{id,jdbcType=VARCHAR}, #{loginName,jdbcType=VARCHAR}, #{needChangePassword,jdbcType=BIT}, 
+      #{lastLoginDate,jdbcType=TIMESTAMP}, #{registerDate,jdbcType=TIMESTAMP}, #{password,jdbcType=VARCHAR}, 
+      #{idNumber,jdbcType=VARCHAR}, #{enabled,jdbcType=BIT}, #{mobile,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="pet.model.employee.Employee">
+    insert into tb_employee
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="loginName != null">
+        login_name,
+      </if>
+      <if test="needChangePassword != null">
+        need_change_password,
+      </if>
+      <if test="lastLoginDate != null">
+        last_login_date,
+      </if>
+      <if test="registerDate != null">
+        register_date,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="idNumber != null">
+        id_number,
+      </if>
+      <if test="enabled != null">
+        enabled,
+      </if>
+      <if test="mobile != null">
+        mobile,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="loginName != null">
+        #{loginName,jdbcType=VARCHAR},
+      </if>
+      <if test="needChangePassword != null">
+        #{needChangePassword,jdbcType=BIT},
+      </if>
+      <if test="lastLoginDate != null">
+        #{lastLoginDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="registerDate != null">
+        #{registerDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="idNumber != null">
+        #{idNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="enabled != null">
+        #{enabled,jdbcType=BIT},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="pet.model.employee.Employee">
+    update tb_employee
+    <set>
+      <if test="loginName != null">
+        login_name = #{loginName,jdbcType=VARCHAR},
+      </if>
+      <if test="needChangePassword != null">
+        need_change_password = #{needChangePassword,jdbcType=BIT},
+      </if>
+      <if test="lastLoginDate != null">
+        last_login_date = #{lastLoginDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="registerDate != null">
+        register_date = #{registerDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="idNumber != null">
+        id_number = #{idNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="enabled != null">
+        enabled = #{enabled,jdbcType=BIT},
+      </if>
+      <if test="mobile != null">
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="pet.model.employee.Employee">
+    update tb_employee
+    set login_name = #{loginName,jdbcType=VARCHAR},
+      need_change_password = #{needChangePassword,jdbcType=BIT},
+      last_login_date = #{lastLoginDate,jdbcType=TIMESTAMP},
+      register_date = #{registerDate,jdbcType=TIMESTAMP},
+      password = #{password,jdbcType=VARCHAR},
+      id_number = #{idNumber,jdbcType=VARCHAR},
+      enabled = #{enabled,jdbcType=BIT},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
