@@ -81,7 +81,7 @@ public class GeneratorSqlmap {
 		modelConfig.setTargetProject(MODEL_TARGET_PROJECT);
 		// 设置上下文--设置sqlMapGenerator路径
 		SqlMapGeneratorConfiguration sqlMapConfig = context.getSqlMapGeneratorConfiguration();
-		sqlMapConfig.setTargetPackage(MAPPER_TARGET_PACKAGE);
+		sqlMapConfig.setTargetPackage(MAPPER_TARGET_PACKAGE+MODULE);
 		sqlMapConfig.setTargetProject(MAPPER_TARGET_PROJECT);
 		// 设置上下文--设置javaClientGenerator路径
 		JavaClientGeneratorConfiguration daoConfig = context.getJavaClientGeneratorConfiguration();
