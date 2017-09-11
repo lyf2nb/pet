@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>spring boot + vue + elementui</title>
-    <link rel="stylesheet" href="/employeeList.html/cdn.bootcss.com/element-ui/1.1.2/theme-default/index.css"/>
+    <link rel="stylesheet" href="//cdn.bootcss.com/element-ui/1.1.2/theme-default/index.css"/>
     <script src="//cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
     <script src="//cdn.bootcss.com/element-ui/1.1.2/index.js"></script>
     <script src="//cdn.bootcss.com/vue-resource/1.0.3/vue-resource.min.js"></script>
@@ -12,7 +12,7 @@
 <div id="vm">
     <el-row :gutter="3" style="margin: 10px 0;">
         <el-col :span="5">
-            <el-input placeholder="输入用户名称查询" v-model="username" icon="search" @change="changeUsername"></el-input>
+            <el-input placeholder="输入用户名称查询" v-model="username" icon="search" @change="changeUsername"/>
         </el-col>
     </el-row>
     <el-table border fit :data="tableData" highlight-current-row style="width: 100%;font-size: 12px;">
@@ -45,7 +45,7 @@ var vm = new Vue({
             if (this.username && this.username.trim() != "") {
                 params_['username'] = this.username;
             }
-            this.$http.get("/getTableData", {params: params_}).then(function (response) {
+/*            this.$http.get("/getTableData", {params: params_}).then(function (response) {
                 console.log(response.data);
                 this.total = response.data.count;
                 this.tableData = [];
@@ -54,7 +54,7 @@ var vm = new Vue({
                 }
             }).catch(function (response) {
                 console.error(response);
-            });
+            });*/
             this.listLoading = false;
         }, formatDate: function getNowFormatDate(time) {
             var date = new Date(time);

@@ -95,7 +95,7 @@ public class GeneratorSqlmap {
 		myBatisGenerator.generate(null);
 
 	} 
-	public static void main(String[] args) throws Exception {
+/*	public static void main(String[] args) throws Exception {
 
 		try {
 			GeneratorSqlmap generatorSqlmap = new GeneratorSqlmap();
@@ -104,7 +104,7 @@ public class GeneratorSqlmap {
 			e.printStackTrace();
 		}
 		
-	}
+	}*/
 
 	public static void p(Object o){
 		System.out.println(o);
