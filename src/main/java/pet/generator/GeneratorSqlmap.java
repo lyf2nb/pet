@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.*;
 import org.mybatis.generator.config.xml.ConfigurationParser;
@@ -77,15 +78,15 @@ public class GeneratorSqlmap {
 
 		// 设置上下文--设置javaModelGenerator路径
 		JavaModelGeneratorConfiguration modelConfig = context.getJavaModelGeneratorConfiguration();
-		modelConfig.setTargetPackage(MODEL_TARGET_PACKAGE+MODULE);
+		modelConfig.setTargetPackage(StringUtils.isEmpty(MODULE)?MODEL_TARGET_PACKAGE:MODEL_TARGET_PACKAGE+MODULE);
 		modelConfig.setTargetProject(MODEL_TARGET_PROJECT);
 		// 设置上下文--设置sqlMapGenerator路径
 		SqlMapGeneratorConfiguration sqlMapConfig = context.getSqlMapGeneratorConfiguration();
-		sqlMapConfig.setTargetPackage(MAPPER_TARGET_PACKAGE+MODULE);
+		sqlMapConfig.setTargetPackage(StringUtils.isEmpty(MODULE)?MAPPER_TARGET_PACKAGE:MAPPER_TARGET_PACKAGE+MODULE);
 		sqlMapConfig.setTargetProject(MAPPER_TARGET_PROJECT);
 		// 设置上下文--设置javaClientGenerator路径
 		JavaClientGeneratorConfiguration daoConfig = context.getJavaClientGeneratorConfiguration();
-		daoConfig.setTargetPackage(DAO_TARGET_PACKAGE+MODULE);
+		daoConfig.setTargetPackage(StringUtils.isEmpty(MODULE)?DAO_TARGET_PACKAGE:DAO_TARGET_PACKAGE+MODULE);
 		daoConfig.setTargetProject(DAO_TARGET_PROJECT);
 
 		DefaultShellCallback callback = new DefaultShellCallback(overwrite);
@@ -95,6 +96,7 @@ public class GeneratorSqlmap {
 
 	} 
 	public static void main(String[] args) throws Exception {
+
 		try {
 			GeneratorSqlmap generatorSqlmap = new GeneratorSqlmap();
 			generatorSqlmap.generator();
