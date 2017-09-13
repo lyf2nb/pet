@@ -1,8 +1,8 @@
 {
-  "name": "frontend",
+  "name": "frontend2",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "renns <745258662@qq.com>",
+  "author": "rns <renns@newhope.cn>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
