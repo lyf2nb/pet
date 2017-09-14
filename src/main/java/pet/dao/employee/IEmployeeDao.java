@@ -1,7 +1,9 @@
 package pet.dao.employee;
 
+import org.springframework.stereotype.Component;
 import pet.model.employee.Employee;
 
+@Component
 public interface IEmployeeDao {
     int deleteByPrimaryKey(String id);
 
