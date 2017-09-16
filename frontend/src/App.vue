@@ -1,23 +1,25 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
-  </div>
+  <section class="body-warp">
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
+  </section>
 </template>
-
-<script>
-export default {
-  name: 'app'
-}
+<script type="text/javascript">
+  export default {
+    name: 'app'
+  }
 </script>
+<style lang="scss" type="text/scss" rel="stylesheet/scss">
+  @import '~assets/scss/main';
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all .2s ease;
+  }
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0;
+  }
 </style>

@@ -1,13 +1,32 @@
-.DS_Store
-node_modules/
-#dist/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# maven ignore
+target/
 
-# Editor directories and files
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+# eclipse ignore
+.settings/
+.project
+.classpath
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+# project ignore
+**/tmp
+pom.xml.versionsBackup
+
+# node ignore
+node_modules/
+dist/
