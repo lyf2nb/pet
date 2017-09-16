@@ -27,7 +27,7 @@ import java.util.List;
 public class Test {
 
 
-
+/*
 
     public static void main(String[] args) throws Exception {
 
@@ -46,7 +46,7 @@ public class Test {
         request.setEntity(new UrlEncodedFormEntity(formParams, HTTP.UTF_8));
         sendRequest(client,request,3);
         //send(url);
-    }
+    }*/
 
     public static void sendRequest(HttpClient client, HttpPost request, int count) {
 
