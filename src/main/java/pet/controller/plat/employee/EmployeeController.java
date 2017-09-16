@@ -12,6 +12,10 @@ import pet.model.employee.Employee;
 import pet.service.employee.IEmployeeService;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by hama on 2017/9/11.
@@ -39,6 +43,21 @@ public class EmployeeController {
         logger.info("id:[{}]", id);
         Employee employee = iEmployeeService.selectByPrimaryKey(id);
         return employee;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/notifications", method = RequestMethod.POST)
+    public Object notifications(HttpServletRequest request, HttpServletResponse response) throws InterruptedException {
+        logger.info("notifications+notifications+notifications");
+        for(int i=1;i<6; i++){
+            logger.info(i+"");
+            Thread.sleep(1000);
+        }
+        Map<String, Object> result = new HashMap();
+        result.put("success", true);
+        result.put("data", "notify success");
+        logger.info(result.toString());
+        return result;
     }
 
 }
