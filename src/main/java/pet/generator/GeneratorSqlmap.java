@@ -95,16 +95,16 @@ public class GeneratorSqlmap {
 		myBatisGenerator.generate(null);
 
 	} 
-	public static void main(String[] args) throws Exception {
-
-		try {
-			GeneratorSqlmap generatorSqlmap = new GeneratorSqlmap();
-			generatorSqlmap.generator();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
+//	public static void main(String[] args) throws Exception {
+//
+//		try {
+//			GeneratorSqlmap generatorSqlmap = new GeneratorSqlmap();
+//			generatorSqlmap.generator();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//
+//	}
 
 	public static void p(Object o){
 		System.out.println(o);
