@@ -39,8 +39,8 @@ public class GeneratorSqlmap {
 	 * 需要生成的目标表
 	 */
 	private static final String SCHEMA= "pet";
-	private static final String TABLE_NAME = "tb_employee";
-	private static final String DOMAIN_OBJECT_NAME = "Employee";
+	private static final String TABLE_NAME = "tb_generator_datasource";
+	private static final String DOMAIN_OBJECT_NAME = "TableRole";
 	private static final String MODULE = ".employee";
 
 
@@ -95,7 +95,7 @@ public class GeneratorSqlmap {
 		myBatisGenerator.generate(null);
 
 	} 
-/*	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception {
 
 		try {
 			GeneratorSqlmap generatorSqlmap = new GeneratorSqlmap();
@@ -103,8 +103,8 @@ public class GeneratorSqlmap {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-	}*/
+
+	}
 
 	public static void p(Object o){
 		System.out.println(o);

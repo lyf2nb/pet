@@ -42,6 +42,7 @@ public class EmployeeController {
     public Object getEmployee(@PathVariable("id") String id) {
         logger.info("id:[{}]", id);
         Employee employee = iEmployeeService.selectByPrimaryKey(id);
+        logger.info("{}",employee.toString());
         return employee;
     }
 
