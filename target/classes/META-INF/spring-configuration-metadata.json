@@ -1,0 +1,9 @@
+{
+  "properties": [],
+  "groups": [{
+    "name": "c3p0",
+    "type": "javax.sql.DataSource",
+    "sourceType": "pet.Application",
+    "sourceMethod": "dataSource()"
+  }]
+}
