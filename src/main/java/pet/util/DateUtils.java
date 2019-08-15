@@ -1,9 +1,7 @@
-package pet.Util;/**
+package pet.util;/**
  * Created by Administrator on 2017/8/11.
  */
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -35,10 +33,10 @@ public class DateUtils {
 
     }
 
-    public static void main(String [] args) throws ParseException {
+/*    public static void main(String [] args) throws ParseException {
         String target = "2017-08-11 12:00:00";
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         System.out.println(sameDay(sdf.parse(target),new Date()));
-    }
+    }*/
 
 }
